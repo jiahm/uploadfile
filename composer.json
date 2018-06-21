@@ -1,0 +1,17 @@
+{
+    "name": "guanguans/laupload",
+    "description": "一个 laravel 上传小组件",
+    "type": "library",
+    "require": {
+        "php": ">=5.4.0",
+        "bower-asset/hdjs": "master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "guanguans",
+            "email": "798314049@qq.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
