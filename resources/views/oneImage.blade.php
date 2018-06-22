@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <title>uploadfile test</title>
-    <meta name="csrf-token" content="{{csrf_token()}}">
-</head>
-<body>
-<div class="col-sm-10">
+<meta name="csrf-token" content="{{csrf_token()}}">
+<div class="col-sm-12">
     <div class="input-group">
         <input class="form-control" name="thumb" readonly="" value="">
         <div class="input-group-btn">
@@ -14,20 +7,19 @@
         </div>
     </div>
     <div class="input-group" style="margin-top:5px;">
-        <img src="../dist/static/image/nopic.jpg" class="img-responsive img-thumbnail" width="150">
+        <img src="{{ asset('node_modules/hdjs/dist/static/image/nopic.jpg') }}" class="img-responsive img-thumbnail" width="150">
         <em class="close" style="position:absolute; top: 0px; right: -14px;" title="删除这张图片"
             onclick="removeImg(this)">×</em>
     </div>
 </div>
-</body>
 <script>
     window.hdjs={};
     //组件目录必须绝对路径(在网站根目录时不用设置)
-    window.hdjs.base = '/node_modules/hdjs';
+    window.hdjs.base = "{{ asset('node_modules/hdjs')}}";
     //上传文件后台地址
-    window.hdjs.uploader = 'test/php/uploader.php?';
+    window.hdjs.uploader = "{{ route('upload.store') }}";
     //获取文件列表的后台地址
-    window.hdjs.filesLists = 'test/php/filesLists.php?';
+    window.hdjs.filesLists = "{{ route('upload.filesLists') }}";
 </script>
 <script>
     require(['hdjs']);
@@ -49,12 +41,10 @@
 
     //移除图片
     function removeImg(obj) {
-        $(obj).prev('img').attr('src', '../dist/static/image/nopic.jpg');
+        $(obj).prev('img').attr('src', "{{ asset('node_modules/hdjs/dist/static/image/nopic.jpg') }}");
         $(obj).parent().prev().find('input').val('');
     }
 </script>
-<script src="/hdjs/static/requirejs/require.js"></script>
-<script src="/node_modules/hdjs/static/requirejs/config.js"></script>
-</html>
-
+<script src="{{ asset('node_modules/hdjs/static/requirejs/require.js') }}"></script>
+<script src="{{ asset('node_modules/hdjs/static/requirejs/config.js') }}"></script>
 
