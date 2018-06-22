@@ -20,5 +20,13 @@
             }
         }
     },
+    "autoload": {
+        "psr-4": {
+            "guanguans\\laupload\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
     "minimum-stability": "dev"
 }
