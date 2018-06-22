@@ -2,6 +2,8 @@
     "name": "guanguans/laupload",
     "description": "一个 laravel 上传小组件",
     "type": "library",
+    "keywords": ["laravel", "upload", "laupload"],
+    "homepage": "https://github.com/guanguans/laupload",
     "require": {
         "php": ">=5.4.0",
         "npm-asset/hdjs": "master"
@@ -28,5 +30,16 @@
             "src/helpers.php"
         ]
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "guanguans\\laupload\\LauploadServiceProvider"
+            ],
+            "aliases": {
+                "laupload": "guanguans\\laupload\\laupload"
+            }
+
+        }
+    }
 }
