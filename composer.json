@@ -6,7 +6,7 @@
     "homepage": "https://github.com/guanguans/laupload",
     "require": {
         "php": ">=5.4.0",
-        "npm-asset/hdjs": "dev-master"
+        "npm-asset/hdjs": "master"
     },
     "license": "MIT",
     "authors": [
@@ -30,7 +30,6 @@
             "src/helpers.php"
         ]
     },
-    "minimum-stability": "stable",
     "extra": {
         "laravel": {
             "providers": [
