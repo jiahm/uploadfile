@@ -5,7 +5,7 @@
     <a href="https://github.com/guanguans/laupload/tags"><img src="https://img.shields.io/github/tag/guanguans/laupload.svg" alt="GitHub tag"></a>
 </p>
 
-# 通用文件上传类
+# 一个 laravel 的上传组件
 
 ## 安装
 
