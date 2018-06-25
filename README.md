@@ -28,12 +28,16 @@ public function register()
 }
 ```
 
+``` sh
+php artisan vendor:publish --provider="guanguans\laupload\LauploadServiceProvider"
+```
+
 ### 配置
 
 ``` php
 return [
     ...
-    'uploadStore'    => 'uploadStore',    // 上传文件路由
+    'uploadStore'    => 'uploadStore', // 上传文件路由
 ];
 ```
 
@@ -48,7 +52,7 @@ return [
     {!! laupload_widget('oneImage') !!}
 
     <!----------多图视图----------->
-    {!! laupload_widget('muiIamge') !!}
+    {!! laupload_widget('muiImage') !!}
 
     <!----------移动端视图----------->
     {!! laupload_widget('app') !!}
@@ -71,6 +75,7 @@ public function store()
         // 失败时返回数据 message 为失败原因
         $data = ['valid' => 0, 'message' => "后台提示:" . $upload->getErrorMsg()];
     }
+
     return $data;
 }
 ```

@@ -21,12 +21,12 @@
         function upImagePc() {
             require(['hdjs'], function (hdjs) {
                 var options = {
-                    multiple: false,//是否允许多图上传
-                    //data是向后台服务器提交的POST数据
+                    multiple: false, // 是否允许多图上传
+                    // data是向后台服务器提交的POST数据
                     data: {name: '后盾人', year: 2099},
                 };
                 hdjs.image(function (images) {
-                    //上传成功的图片，数组类型
+                    // 上传成功的图片，数组类型
                     $("[name='thumb']").val(images[0]);
                     $(".img-thumbnail").attr('src', images[0]);
                 }, options)

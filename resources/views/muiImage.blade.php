@@ -24,7 +24,7 @@
                     $("<img src='" + v + "'/>").appendTo('#box');
                 })
             }, {
-                //上传多图
+                // 上传多图
                 multiple: true,
             })
         });
