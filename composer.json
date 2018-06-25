@@ -6,7 +6,7 @@
     "homepage": "https://github.com/guanguans/laupload",
     "require": {
         "php": ">=5.4.0",
-        "npm-asset/hdjs": "master"
+        "npm-asset/hdjs": "1.2.105"
     },
     "license": "MIT",
     "authors": [
