@@ -1,16 +1,10 @@
-<meta name="csrf-token" content="{{csrf_token()}}">
+@extends('laupload.layouts.base')
+@section('html')
 <button onclick="upImage()" class="btn btn-default">选择图片</button>
+@endsection
+@section('script')
 <script>
-    window.hdjs={};
-    //组件目录必须绝对路径(在网站根目录时不用设置)
-    window.hdjs.base = "{{ asset('node_modules/hdjs')}}";
-    //上传文件后台地址
-    window.hdjs.uploader = "{{ route('upload.store') }}";
-    //获取文件列表的后台地址
-    window.hdjs.filesLists = "{{ route('upload.filesLists') }}";
-</script>
-<script>
-    //上传图片
+    // 移动端上传
     function upImage() {
         require(['hdjs'], function (hdjs) {
             var options = {
@@ -28,6 +22,4 @@
         });
     }
 </script>
-<script src="{{ asset('node_modules/hdjs/static/requirejs/require.js') }}"></script>
-<script src="{{ asset('node_modules/hdjs/static/requirejs/config.js') }}"></script>
-
+@endsection

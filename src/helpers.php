@@ -7,8 +7,8 @@ if (!function_exists('laupload_widget')) {
      * @param string
      * @return string
      */
-    function laupload_widget($action, $type = 'oneImage')
+    function laupload_widget($type = 'oneImage')
     {
-        return view('laupload::'.$type, ['action'=>$action]);
+        return view('laupload.'.$type);
     }
 }
