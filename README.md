@@ -7,7 +7,7 @@
 
 # 一个 laravel 的上传组件
 
-![](docs.demo.gif)
+<div align="center"><img src="docs/demo.gif"/></div>
 
 ## 安装
 
