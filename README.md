@@ -16,11 +16,21 @@ composer require guanguans/laupload
 
 ## 使用
 
+### 注册服务
+
+`app/Providers/AppServiceProvider.php` 中：
+
+``` php
+...
+public function register()
+{
+    $this->app->register('guanguans\lauplaod\LauploadServiceProvider');
+}
+```
+
 ### 配置
 
 ``` php
-<?php
-
 return [
     ...
     'uploadStore'    => 'uploadStore',    // 上传文件路由

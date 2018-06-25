@@ -18,6 +18,7 @@ class LauploadServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([__DIR__.'/../config' => config_path()], 'laupload');
             $this->publishes([__DIR__.'/../resources/views' => resource_path('views/laupload')]);
+            $this->publishes([__DIR__.'/../../../npm-asset' => public_path('node_modules')]);
         }
     }
 }
