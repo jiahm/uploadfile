@@ -53,12 +53,12 @@ use guanguans\laupload\Laupload;
 public function store()
 {
     $upload = new Laupload();
-    $upload->savePath = storage_path('app/public/laupload') . '/';    // 上传根目录
+    $upload->savePath = storage_path('app/public/laupload') . '/'; // 上传根目录
     if ($upload->upload()) {
-        //成功时返回数据 message 为文件地址
+        // 成功时返回数据 message 为文件地址
         $data = ['valid' => 1, 'message' => asset('storage/app/public/laupload/').'/'.$upload->getUploadFileInfo()[0]['savename']];
     } else {
-        //失败时返回数据 message 为失败原因
+        // 失败时返回数据 message 为失败原因
         $data = ['valid' => 0, 'message' => "后台提示:" . $upload->getErrorMsg()];
     }
     return $data;
