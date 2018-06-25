@@ -7,6 +7,8 @@
 
 # 一个 laravel 的上传组件
 
+![](./docs.demo.gif)
+
 ## 安装
 
 ``` sh
@@ -26,6 +28,14 @@ public function register()
 {
     $this->app->register('guanguans\lauplaod\LauploadServiceProvider');
 }
+```
+或者 `config/app.php` 中：
+
+``` php
+'providers' => [
+    ...
+    guanguans\lauplaod\LauploadServiceProvider::class,
+],
 ```
 
 ``` sh
@@ -54,7 +64,7 @@ return [
     <!----------多图视图----------->
     {!! laupload_widget('muiImage') !!}
 
-    <!----------移动端视图----------->
+    <!----------移动端视图--------->
     {!! laupload_widget('app') !!}
 </div>
 ```
