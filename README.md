@@ -7,7 +7,7 @@
 
 # 一个 laravel 的上传组件
 
-<div align="center"><img src="docs/demo.gif"/></div>
+<div align="center"><img src="./docs/demo.gif"/></div>
 
 ## 安装
 
@@ -20,22 +20,23 @@ composer require guanguans/laupload
 
 ### 注册服务
 
-`app/Providers/AppServiceProvider.php` 中：
+`config/app.php` 中：
+
+``` php
+'providers' => [
+    ...
+    guanguans\laupload\LauploadServiceProvider::class,
+],
+```
+
+或者 `app/Providers/AppServiceProvider.php` 中：
 
 ``` php
 ...
 public function register()
 {
-    $this->app->register('guanguans\lauplaod\LauploadServiceProvider');
+    $this->app->register('guanguans\laupload\LauploadServiceProvider');
 }
-```
-或者 `config/app.php` 中：
-
-``` php
-'providers' => [
-    ...
-    guanguans\lauplaod\LauploadServiceProvider::class,
-],
 ```
 
 ``` sh
@@ -54,16 +55,13 @@ return [
 ### 视图
 
 ``` html
-<div class="col-lg-4">
+<div class="col-md-4">
     <!----------文件视图----------->
     {!! laupload_widget('file') !!}
-
     <!----------单图视图----------->
     {!! laupload_widget('oneImage') !!}
-
     <!----------多图视图----------->
     {!! laupload_widget('muiImage') !!}
-
     <!----------移动端视图--------->
     {!! laupload_widget('app') !!}
 </div>
