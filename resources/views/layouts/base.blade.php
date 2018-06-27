@@ -7,7 +7,7 @@
     // 上传文件后台地址
     window.hdjs.uploader = "{{ route(config('laupload.uploadStore')) }}";
     // 获取文件列表的后台地址
-    // window.hdjs.filesLists = "{{ route(config('laupload.uploadFileList')) }}";
+    window.hdjs.filesLists = "{{ route(config('laupload.uploadFileList')) }}";
 </script>
 @yield('script')
 <script src="{{ asset('node_modules/hdjs/static/requirejs/require.js') }}"></script>

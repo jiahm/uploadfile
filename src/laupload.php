@@ -15,9 +15,9 @@
  * $upload->subType       = 'date';         // 上传子目录命名规则
  * $upload->allowExts     = ['jpg', 'png']; // 允许类型
  * if ($upload->upload()) {
- * var_dump($upload->getUploadFileInfo());
+ *     var_dump($upload->getUploadFileInfo());
  * } else {
- * var_dump($upload->getErrorMsg());
+ *     var_dump($upload->getErrorMsg());
  * }
  *
  */

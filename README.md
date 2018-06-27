@@ -48,7 +48,8 @@ php artisan vendor:publish --provider="guanguans\laupload\LauploadServiceProvide
 ``` php
 return [
     ...
-    'uploadStore'    => 'uploadStore', // 上传文件路由
+    'uploadStore'  => 'uploadStore', // 上传文件路由
+    'uploadFileList' => 'uploadFileList', // 获取文件列表路由
 ];
 ```
 
@@ -78,7 +79,7 @@ public function store()
     $upload->savePath = storage_path('app/public/laupload') . '/'; // 上传根目录
     if ($upload->upload()) {
         // 成功时返回数据 message 为文件地址
-        $data = ['valid' => 1, 'message' => asset('storage/app/public/laupload/').'/'.$upload->getUploadFileInfo()[0]['savename']];
+        $data = ['valid' => 1, 'message' => asset('storage/app/public/laupload/'.$upload->getUploadFileInfo()[0]['savename'])];
     } else {
         // 失败时返回数据 message 为失败原因
         $data = ['valid' => 0, 'message' => "后台提示:" . $upload->getErrorMsg()];
