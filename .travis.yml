@@ -13,14 +13,20 @@ sudo: false
 before_script:
   - composer self-update
   - composer global require fxp/composer-asset-plugin
-  - composer require guanguans/laupload
+  - composer create-project guanguans/laupload
   # - composer install --no-interaction --dev
 
 script:
-  - ./vendor/bin/phpunit --verbose --coverage-clover=coverage.xml
+  # - ./vendor/bin/phpunit --verbose --coverage-clover=coverage.xml
 
 after_script:
   - bash <(curl -s https://codecov.io/bash)
 
 matrix:
   fast_finish: true
+
+after_failure:
+  - curl "https://api.day.app/${APIDAYTOKEN}/laupload 构建失败"
+
+after_success:
+  - curl "https://api.day.app/${APIDAYTOKEN}/laupload 构建成功"
