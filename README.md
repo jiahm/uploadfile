@@ -1,19 +1,17 @@
-<p align="center">
-    <a href="https://packagist.org/packages/guanguans/laupload"><img src="https://img.shields.io/packagist/v/guanguans/laupload.svg" alt="Version"></a>
-    <a href="https://packagist.org/packages/guanguans/laupload"><img src="https://img.shields.io/packagist/l/guanguans/laupload.svg" alt="License"></a>
-    <a href="https://packagist.org/packages/guanguans/laupload"><img src="https://img.shields.io/packagist/php-v/guanguans/laupload.svg" alt="PHP version"></a>
-    <a href="https://github.com/guanguans/laupload/tags"><img src="https://img.shields.io/github/tag/guanguans/laupload.svg" alt="GitHub tag"></a>
-</p>
-
 # 一个 laravel 的上传组件
+
+[![StyleCI](https://github.styleci.io/repos/138152318/shield?branch=master)](https://github.styleci.io/repos/138152318)
+[![Latest Stable Version](https://poser.pugx.org/guanguans/laupload/v/stable)](https://packagist.org/packages/guanguans/laupload)
+[![Version](https://img.shields.io/packagist/v/guanguans/laupload.svg)](https://packagist.org/packages/guanguans/laupload)
+[![License](https://img.shields.io/packagist/l/guanguans/laupload.svg)](https://packagist.org/packages/guanguans/laupload)
 
 <div align="center"><img src="./docs/demo.gif"/></div>
 
 ## 安装
 
-``` sh
-composer global require fxp/composer-asset-plugin
-composer require guanguans/laupload
+``` bash
+$ composer global require fxp/composer-asset-plugin
+$ composer require guanguans/laupload
 ```
 
 ## 使用
@@ -39,8 +37,8 @@ public function register()
 }
 ```
 
-``` sh
-php artisan vendor:publish --provider="guanguans\laupload\LauploadServiceProvider"
+``` bash
+$ php artisan vendor:publish --provider="guanguans\laupload\LauploadServiceProvider"
 ```
 
 ### 配置
