@@ -10,7 +10,7 @@
 
 namespace guanguans\laupload;
 
-class Laupload
+class laupload
 {
     private $config = [
         'maxSize' => -1,               // 上传文件的最大值
@@ -40,8 +40,10 @@ class Laupload
         'saveRule' => 'uniqid',         // 上传文件命名规则
         'hashType' => 'md5_file',       // 上传文件Hash规则函数名
     ];
+
     // 错误信息
     private $error = '';
+
     // 上传成功的文件信息
     private $uploadFileInfo;
 
@@ -106,7 +108,7 @@ class Laupload
                 }
             }
         } else {
-            if (!is_writeable($savePath)) {
+            if (!is_writable($savePath)) {
                 $this->error = '上传目录'.$savePath.'不可写';
 
                 return false;
@@ -243,9 +245,11 @@ class Laupload
         switch ($this->subType) {
             case 'custom':
                 $dir = $this->subDir;
+
                 break;
             case 'date':
                 $dir = date($this->dateFormat, time()).'/';
+
                 break;
             case 'hash':
             default:
@@ -254,6 +258,7 @@ class Laupload
                 for ($i = 0; $i < $this->hashLevel; ++$i) {
                     $dir .= $name[$i].'/';
                 }
+
                 break;
         }
         if (!is_dir($file['savepath'].$dir)) {
@@ -318,21 +323,27 @@ class Laupload
         switch ($errorNo) {
             case 1:
                 $this->error = '上传的文件超过了 php.ini 中 upload_max_filesize 选项限制的值';
+
                 break;
             case 2:
                 $this->error = '上传文件的大小超过了 HTML 表单中 MAX_FILE_SIZE 选项指定的值';
+
                 break;
             case 3:
                 $this->error = '文件只有部分被上传';
+
                 break;
             case 4:
                 $this->error = '没有文件被上传';
+
                 break;
             case 6:
                 $this->error = '找不到临时文件夹';
+
                 break;
             case 7:
                 $this->error = '文件写入失败';
+
                 break;
             default:
                 $this->error = '未知上传错误！';
@@ -508,7 +519,7 @@ class Laupload
                 return false;
             }
         } else {
-            if (!is_writeable($savePath)) {
+            if (!is_writable($savePath)) {
                 $this->error = '上传目录'.$savePath.'不可写';
 
                 return false;
