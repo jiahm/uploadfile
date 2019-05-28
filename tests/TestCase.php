@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the guanguans/dcloud-app-pay.
+ * This file is part of the guanguans/laupload.
  *
  * (c) 琯琯 <yzmguanguan@gmail.com>
  *

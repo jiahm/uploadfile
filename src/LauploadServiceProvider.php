@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * This file is part of the guanguans/laupload.
+ *
+ * (c) 琯琯 <yzmguanguan@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
+ */
+
 namespace guanguans\laupload;
 
 use Illuminate\Support\ServiceProvider;
@@ -8,8 +16,6 @@ class LauploadServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
-     *
-     * @return void
      */
     public function boot()
     {

@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * This file is part of the guanguans/laupload.
+ *
+ * (c) 琯琯 <yzmguanguan@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
+ */
+
 return [
     'maxSize'        => -1,               // 上传文件的最大值
     'supportMulti'   => true,             // 是否支持多文件上传
@@ -10,7 +18,7 @@ return [
     'subDir'         => '',               // 子目录名称 subType为custom方式后有效
     'dateFormat'     => 'Ymd',            // 子目录名称规则
     'hashLevel'      => 1,                // hash的目录层次
-    'savePath'       => storage_path('app/public/laupload') . '/', // 上传文件保存路径
+    'savePath'       => storage_path('app/public/laupload').'/', // 上传文件保存路径
     'autoCheck'      => true,             // 是否自动检查附件
     'uploadReplace'  => false,            // 存在同名是否覆盖
     'saveRule'       => 'uniqid',         // 上传文件命名规则
