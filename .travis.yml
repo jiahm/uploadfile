@@ -13,10 +13,6 @@ sudo: false
 before_script:
   - composer self-update
   - composer global require fxp/composer-asset-plugin
-  - composer require phpunit/phpunit
-
-script:
-  - phpunit --verbose --coverage-clover=coverage.xml
 
 after_script:
   - bash <(curl -s https://codecov.io/bash)
