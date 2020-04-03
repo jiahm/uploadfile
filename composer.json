@@ -1,5 +1,5 @@
 {
-    "name": "jiahongming/uploadfile",
+    "name": "jiahm/uploadfile",
     "description": "一个通用laravel上传组件",
     "type": "library",
     "require": {
