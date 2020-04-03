@@ -1,49 +1,24 @@
 {
-    "name": "guanguans/laupload",
-    "description": "一个 laravel 上传小组件",
+    "name": "jiahongming/uploadfile",
+    "description": "一个通用laravel上传组件",
     "type": "library",
-    "keywords": [
-        "laravel",
-        "upload",
-        "laupload"
-    ],
-    "homepage": "https://github.com/guanguans/laupload",
     "require": {
-        "php": ">=5.6.0",
-        "npm-asset/hdjs": "~1.2"
+        "php": "^7.2"
     },
     "require-dev": {
-        "php": ">=5.6.0",
-        "phpunit/phpunit": "~5 || ~7",
-        "mockery/mockery": "~1.0"
+        "php": "^7.2"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "guanguans",
-            "email": "798314049@qq.com"
+            "name": "jiahm",
+            "email": "jz_jhm0516@163.com"
         }
     ],
-    "config": {
-      "process-timeout": 1800,
-      "fxp-asset": {
-        "enabled": false
-      }
-    },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "guanguans\\laupload\\": "src/"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Guanguans\\Tests\\": "tests/"
+            "Guanguans\\": "src/"
         }
-    },
-    "scripts": {
-      "fxp": "composer global require fxp/composer-asset-plugin"
     }
 }
